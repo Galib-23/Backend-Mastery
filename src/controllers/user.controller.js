@@ -185,7 +185,7 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
     
         const options = {
             httpOnly: true,
-            secure: true
+            secure: true,
         }
     
         const {accessToken, newRefreshToken} = await generateAccessAndRefreshTokens(user._id)
@@ -205,4 +205,4 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
     }
 })
 
-export { registerUser, loginUser, logoutUser }
+export { registerUser, loginUser, logoutUser, refreshAccessToken }
